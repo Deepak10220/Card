@@ -7,7 +7,7 @@ const Cart = ({ products, setproducts, setQuantity, quantity }) => {
 
   const [total, settotal] = useState(0);
 
-  // increase
+
   function increase(id) {
     let tempproducts = products;
     tempproducts.map((product, index) => {
@@ -21,7 +21,7 @@ const Cart = ({ products, setproducts, setQuantity, quantity }) => {
     setproducts([...tempproducts]);
     setQuantity((prev) => prev + 1);
   }
-  // decrease
+
   function decrease(id) {
     let tempProducts = [...products];
     tempProducts.map((product, index) => {
@@ -48,7 +48,7 @@ const Cart = ({ products, setproducts, setQuantity, quantity }) => {
 
     setproducts(tempProducts);
 
-    // Calculate total again after removing the product
+
     let newTotal = tempProducts.reduce((acc, curr) => {
       return acc + curr.quantity * curr.price;
     }, 0);
@@ -117,7 +117,7 @@ const Cart = ({ products, setproducts, setQuantity, quantity }) => {
               setQuantity(0);
             }}
           >
-            CearAll
+            Clear All
           </button>
         )}
       </div>

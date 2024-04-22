@@ -5,7 +5,7 @@ const Navbar = ({quantity}) => {
   return (
     <div>
         <ul className='nav'>
-            <li>AddYouRBag</li>
+            <li>Add Your Bag</li>
             <div style={{display:"flex"}}> 
             <li><FaCartArrowDown  className='cartIcon'/></li>
             <span className='cardQunatity'>{quantity}</span></div>
